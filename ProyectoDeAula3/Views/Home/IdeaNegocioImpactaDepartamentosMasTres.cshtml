@@ -1,0 +1,10 @@
+﻿@model List<ProyectoDeAula4_MiguelHerazo_SamuelMeneses_JeronimoRivera.Models.IdeaNegocioModel>
+
+<h2>Las ideas de negocio que impactan más de 3 departamentos</h2>
+
+<ul>
+    @foreach (var idea in Model)
+    {
+        <li>@idea.Nombre</li>
+    }
+</ul>

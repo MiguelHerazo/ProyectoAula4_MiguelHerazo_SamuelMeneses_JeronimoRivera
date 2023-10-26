@@ -1,0 +1,32 @@
+﻿@model ProyectoDeAula4_MiguelHerazo_SamuelMeneses_JeronimoRivera.Models.IdeaNegocioModel
+
+<h2>Idea de Negocio con Mayor Cantidad de Herramientas 4RI</h2>
+
+@if (Model != null)
+{
+    <p>Nombre de la Idea de Negocio: @Model.Nombre</p>
+    <p>Impacto Social o Económico: @Model.Impacto</p>
+    <p>Valor de la Inversión: @Model.Inversion</p>
+    <p>Total de Ingresos en los Primeros 3 Años: @Model.Ingresos3Anios</p>
+    <p>Herramientas de la 4RI Utilizadas: @Model.Herramientas4RI</p>
+
+    <h3>Integrantes del Equipo:</h3>
+    <ul>
+        @foreach (var integrante in Model.IntegranteEquipos)
+        {
+            <li>@integrante.Nombre - @integrante.Apellidos - @integrante.Rol - @integrante.Email</li>
+        }
+    </ul>
+
+    <h3>Departamentos que se Benefician:</h3>
+    <ul>
+        @foreach (var departamento in Model.Departamentos)
+        {
+            <li>@departamento.Nombre</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No se encontró ninguna Idea de Negocio .</p>
+}

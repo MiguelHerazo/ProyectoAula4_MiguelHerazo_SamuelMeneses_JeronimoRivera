@@ -1,0 +1,10 @@
+﻿@model List<ProyectoDeAula4_MiguelHerazo_SamuelMeneses_JeronimoRivera.Models.IdeaNegocioModel>
+
+<h2>Las 3 ideas de negocio más rentables</h2>
+
+<ul>
+    @foreach (var idea in Model)
+    {
+        <li>@idea.Nombre - Ingresos en 3 años: @idea.Ingresos3Anios</li>
+    }
+</ul>
